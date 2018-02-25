@@ -1,0 +1,27 @@
+.form-field {
+  background-color: #f7f9fc;
+  color: #c1c9d5;
+  &__label {
+    display: block;
+    font-size: 14px;
+    color: #262e73;
+    font-weight: 400;
+  }
+  &__input {
+    box-sizing: border-box;
+    margin: 6px 0 19px 0;
+    display: block;
+    border: solid 1px #949caa;
+    color: #282828;
+    height: 43px;
+    width: 100%;
+    padding-left: 21px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20px;
+
+    &:focus {
+      outline: none;
+      background-color: #eff4fe;
+    }
+  }
+}

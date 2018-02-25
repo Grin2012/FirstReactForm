@@ -1,0 +1,10 @@
+.checkbox {
+  &__label {
+  }
+  &__box {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-right: 7px;
+  }
+}

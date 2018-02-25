@@ -1,0 +1,52 @@
+.registration {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 28pt;
+  &__page {
+    padding-top: 220px;
+    padding-bottom: 202px;
+    margin: 0 auto;
+    width: 370px;
+  }
+  &__header {
+    display: block;
+  }
+  &__heading {
+    font-size: 33px;
+    color: #262e73;
+    margin: 0 0 34px 63px;
+  }
+  &__form {
+    padding: 0;
+    margin: 0;
+  }
+  &__fieldset {
+    padding: 0;
+    border: none;
+    margin-top: 19px;
+    margin-bottom: 23px;
+    font-size: 14px;
+    color: #262e73;
+  }
+  &__button {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 16pt;
+    color: #fff;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    width: 100%;
+  }
+  &__link {
+    color: rgb(38, 46, 115);
+    text-decoration: none;
+  }
+  &__text {
+    display: inline-block;
+    width: 330px;
+    color: #a9b0bb;
+    font-size: 11px;
+    line-height: 14px;
+    margin-bottom: 13px;
+  }
+}
