@@ -4,6 +4,10 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 export default class Button extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         const {value, classes, type} = this.props;
 

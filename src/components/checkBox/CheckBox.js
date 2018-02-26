@@ -29,6 +29,9 @@ export default class CheckBox extends React.Component {
         );
     }
 }
+CheckBox.defaultProps = {
+    classes: ''
+};
 
 CheckBox.propTypes = {
     id: PropTypes.string,

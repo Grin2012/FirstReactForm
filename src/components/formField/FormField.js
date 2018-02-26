@@ -12,6 +12,11 @@ export default class FormField extends React.Component {
 
     handleChange(event) {
         this.setState({value: event.target.value});
+        this.props.onChange({
+            value: event.target.value,
+            type: this.props.type,
+            name: this.props.name
+        })
     };
 
     render() {
@@ -20,10 +25,10 @@ export default class FormField extends React.Component {
             <label className='form-field__label'>{label}
                 <input className='form-field__input'
                        value={this.state.value}
-                       onChange={this.handleChange}
                        name={name}
                        type={type}
-                       placeholder={placeholder}/>
+                       placeholder={placeholder}
+                       onChange={this.handleChange}/>
             </label>
         );
     }
