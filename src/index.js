@@ -20,7 +20,7 @@ ReactDOM.render(
                 <Route exact path='/' component={Registration}/>
                 <Route exact path='/news' component={News}/>
             </Layout>
-        </BrowserRouter>,
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root')
 );

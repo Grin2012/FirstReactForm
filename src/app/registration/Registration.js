@@ -35,6 +35,8 @@ class Registration extends React.Component {
         });
     }
 
+    handleClick(event){};
+
     handleSubmit(event) {
         event.preventDefault();
         this.props.userLogin(this.state);
@@ -114,6 +116,7 @@ class Registration extends React.Component {
                         classes='registration__button'
                         value='Зарегистрироваться'
                         type='submit'
+                        onClick={this.handleClick}
                     />
                 </form>
             </section>

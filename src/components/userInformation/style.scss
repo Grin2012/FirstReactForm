@@ -1,0 +1,29 @@
+.user{
+  height:36px;
+  margin-left: auto;
+  padding: 14px 20px 0 20px;
+  display: inline-block;
+  border-top-right-radius: 3px;
+  &:hover{
+    background: #2482db;
+    cursor: pointer;
+  }
+  &:active{
+    background: #074a88;
+  }
+  &__logo{
+    width: 14px;
+    height: 17px;
+    margin-right: 9px;
+    display: inline-block;
+    background: url('images/logoPerson.png') no-repeat;
+  }
+  &__name{
+    position: relative;
+    bottom: 2px;
+    display: inline-block;
+    color:  #ffffff;
+    font-weight: 700;
+  }
+}
+

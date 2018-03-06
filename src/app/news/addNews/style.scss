@@ -1,0 +1,35 @@
+.add-news{
+  display: block;
+  background-color:  #f3fffc;
+  padding:20px;
+  &__buttons{
+    display: table;
+    margin: 0 0 0 auto;
+
+  }
+  &__button{
+       width: 255px;
+       display: inline-block;
+  }
+  &__cancel{
+    display: inline-block;
+    margin: 0 20px 0 0;
+    color:  #808b9e;
+    font-size: 17px;
+    cursor: pointer;
+  }
+  &__background{
+    padding:20px;
+  }
+  &__title{
+    width: 828px;
+    font-family: 'PT Sans', sans-serif;
+  }
+  &__content{
+    width: 828px;
+    font-family: 'PT Sans', sans-serif;
+  }
+  &__toggled{
+    display: none;
+  }
+}

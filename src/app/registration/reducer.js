@@ -2,7 +2,7 @@ import * as types from './actionTypes';
 
 const initialState = {
     user: {
-        firstName: 'Unsign User',
+        firstName: 'Anonymous',
         lastName: '',
         gender: '',
         email: '',

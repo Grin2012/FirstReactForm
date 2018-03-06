@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-//import newsReducer from '../app/news/reducer'
+import newsReducer from '../app/news/reducer'
 import registrationReducer from '../app/registration/reducer'
 
 const appReducer = combineReducers({
-  //  newsReducer,
+    newsReducer,
     registrationReducer
 });
 

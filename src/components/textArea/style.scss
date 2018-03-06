@@ -1,0 +1,25 @@
+.text-area {
+  &__label {
+    display: block;
+    color: #262e73;
+    font-size: 14px;
+    margin-top: 19px;
+  }
+  &__text {
+    height: 110px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 9px 0 19px 0;
+    border: solid 1px #949caa;
+    background-color: #ffffff;
+    font-family: 'PT Sans', Helvetica, sans-serif;
+    color: #282828;
+    font-size: 17px;
+    resize: none;
+    &:focus {
+      outline: none;
+      background-color: #eff4fe;
+    }
+  }
+}
