@@ -4,10 +4,14 @@ import Button from '../../components/button/Button';
 import FormField from '../../components/formField/FormField';
 import RadioButton from '../../components/radioButton/RadioButton';
 import CheckBox from '../../components/checkBox/CheckBox';
+import { bindActionCreators } from 'redux';
+import {connect} from "react-redux";
+import {userLogin} from "./actions";
+
 
 import './style.scss';
 
-export default class Registration extends React.Component {
+class Registration extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,6 +37,7 @@ export default class Registration extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        this.props.userLogin(this.state);
         console.log('New registered user: {\n' +
             'firstName: ' + this.state.firstName + '\n' +
             'lastName: ' + this.state.lastName + '\n' +
@@ -40,6 +45,8 @@ export default class Registration extends React.Component {
             'email: ' + this.state.email + '\n' +
             'password: ' + this.state.password + '\n' +
             'agreement: ' + this.state.agreement + ' }');
+        const { history } = this.props;
+        history.push('/News');
     }
 
     render() {
@@ -96,10 +103,10 @@ export default class Registration extends React.Component {
                         value={this.state.password}
                         onChange={this.handleInputChange}
                     />
-                    <CheckBox id='agreement' type='checkbox' checked={this.state.agreement} onChange={this.handleInputChange}/>
+                    <CheckBox id='agreement' name="agreement" type='checkbox' checked={this.state.agreement} onChange={this.handleInputChange}/>
                     <label className='registration__text' htmlFor='agreement'>
                         Я принимаю условия
-                        <a href="#" className='registration__link'> Пользовательского соглашения </a>
+                        <a href="#" className='registration__link'> Пользовательского соглашения </a> <br/>
                         и даю своё согласие на обработку моих персональных данных на условиях, определенных
                         <a href="#" className='registration__link'> Политикой конфиденциальности.'</a>
                     </label>
@@ -113,3 +120,15 @@ export default class Registration extends React.Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.registrationReducer.user
+    }
+};
+
+const mapDispatchToProps = (dispatch) => ({
+    userLogin: bindActionCreators(userLogin, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Registration);

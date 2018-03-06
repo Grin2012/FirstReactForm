@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './style.scss';
 
 export default class CheckBox extends React.Component {
-    constructor(props) {
+    constructor(props){
         super(props);
         this.state = {checked: true};
         this.handleChange = this.handleChange.bind(this);
@@ -14,27 +14,29 @@ export default class CheckBox extends React.Component {
         this.setState({value: event.target.checked});
         this.props.onChange({
             checked: event.target.checked,
+            type: 'checkbox',
+            name: this.props.name
         })
     }
 
     render() {
-        const {id, name, value} = this.props;
+        const {id, name} = this.props;
         return (
             <input id={id}
                    className='checkbox__box'
                    type='checkbox'
                    name={name}
-                   value={value}
                    onChange={this.handleChange}/>
         );
     }
-}
+};
+
 CheckBox.defaultProps = {
-    classes: ''
+    name: "",
+    id: ""
 };
 
 CheckBox.propTypes = {
     id: PropTypes.string,
-    value: PropTypes.string,
     name: PropTypes.string
 };

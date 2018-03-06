@@ -2,9 +2,8 @@
   font-family: 'PT Sans', sans-serif;
   font-size: 28pt;
   &__page {
-    padding-top: 220px;
-    padding-bottom: 202px;
-    margin: 0 auto;
+    margin-top: 10%;
+    margin-left: 67%;
     width: 370px;
   }
   &__header {
@@ -44,7 +43,7 @@
   &__text {
     display: inline-block;
     width: 330px;
-    color: #a9b0bb;
+    color:  #565d69;
     font-size: 11px;
     line-height: 14px;
     margin-bottom: 13px;
